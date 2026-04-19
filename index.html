@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steamland Tower Puzzle Rooms</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="gateScreen" class="gate-screen">
+    <div class="gate-card">
+      <p class="eyebrow">Steam Tower Console</p>
+      <h1>Enter Inspiration</h1>
+      <form id="gateForm" class="gate-form">
+        <input id="inspirationInput" type="number" min="0" step="1" value="3" />
+        <button type="submit" class="primary-btn">Enter</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="site-shell hidden" id="appShell">
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">The Master Knows ALL</p>
+        <h1 id="siteTitle">Steamland Puzzle Rooms</h1>
+      </div>
+
+      <div class="header-actions">
+        <div class="resource-pill">
+          <span>Inspiration</span>
+          <strong id="globalInspirationValue">0</strong>
+        </div>
+        <button id="resetAllBtn" class="secondary-btn">Reset All</button>
+      </div>
+    </header>
+
+    <nav id="puzzleNav" class="puzzle-nav" aria-label="Puzzle navigation"></nav>
+
+    <main class="panel-stack">
+      <section id="cipherPanel" class="puzzle-panel active"></section>
+      <section id="wordlePanel" class="puzzle-panel"></section>
+      <section id="memoryPanel" class="puzzle-panel"></section>
+    </main>
+  </div>
+<audio id="victoryAudio" preload="auto">
+  <source src="victory.mp3" type="audio/mpeg" />
+</audio>
+
+<audio id="tickAudio" preload="auto">
+  <source src="tick.mp3" type="audio/mpeg" />
+</audio>
+
+<audio id="unlockAudio" preload="auto">
+  <source src="unlock.mp3" type="audio/mpeg" />
+</audio>
+
+<canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+  <script src="app.js"></script>
+</body>
+</html>
